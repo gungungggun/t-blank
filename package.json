@@ -1,0 +1,11 @@
+{
+  "name": "t-blank",
+  "version": "0.1.1",
+  "description": "Set target='_blank' attribute for all external links.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gun Kimura",
+  "license": "MIT"
+}
