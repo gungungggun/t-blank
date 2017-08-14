@@ -1,6 +1,6 @@
 # T-Blank
 
-A datepicker Vue component. Compatible with Vue 1.x and Vue 2.x
+description": "Set target='_blank' attribute for all external links.
 
 ## Install
 
