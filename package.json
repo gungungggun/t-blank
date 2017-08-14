@@ -2,10 +2,23 @@
   "name": "t-blank",
   "version": "0.1.1",
   "description": "Set target='_blank' attribute for all external links.",
+  "keywords": [
+    "blank",
+    "link",
+    "target"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gun Kimura",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gungungggun/t-blank"
+  },
+  "bugs": {
+    "url": "https://github.com/gungungggun/t-blank/issues"
+  },
+  "private": false,
   "license": "MIT"
 }
