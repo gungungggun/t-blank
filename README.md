@@ -1,6 +1,6 @@
 # T-Blank
 
-description": "Set target='_blank' attribute for all external links.
+Set target='_blank' attribute for all external links.
 
 ## Install
 
