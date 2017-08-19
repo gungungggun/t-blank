@@ -9,6 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "build": "node_modules\\.bin\\webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gun Kimura",
@@ -20,5 +21,10 @@
     "url": "https://github.com/gungungggun/t-blank/issues"
   },
   "private": false,
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "webpack": "^2.5.1"
+  }
 }
