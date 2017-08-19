@@ -1,13 +1,13 @@
 {
   "name": "t-blank",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Set target='_blank' attribute for all external links.",
   "keywords": [
     "blank",
     "link",
     "target"
   ],
-  "main": "index.js",
+  "main": "dist/build.js",
   "scripts": {
     "build": "node_modules\\.bin\\webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
