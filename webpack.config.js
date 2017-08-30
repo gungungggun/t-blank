@@ -1,18 +1,18 @@
 module.exports = {
-	entry: __dirname + '/src/index.js',
-	output: {
-		filename: 't-blank.js',
-		path: __dirname + '/dist/',
+  entry: __dirname + '/src/index.js',
+  output: {
+    filename: 't-blank.js',
+    path: __dirname + '/dist/',
     library: "TBlank",
     libraryTarget: "umd"
-	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
-			}
-		]
-	}
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  }
 };
