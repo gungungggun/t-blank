@@ -12,6 +12,9 @@
     <a href="/test">内部</a><br>
     <a href="/test" target="_blank">内部+blank</a><br>
     <a href="#an">ページ内</a><br>
-    <script src="../dist/build.js"></script>
+    <script src="../dist/t-blank.js"></script>
+    <script>
+        console.log(TBlank.replace("<div><a href=\"https://www.google.com\"></a><a href=\"aaa\"></a></div>"))
+    </script>
 </body>
 </html>

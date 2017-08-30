@@ -1,8 +1,10 @@
 module.exports = {
 	entry: __dirname + '/src/index.js',
 	output: {
-		filename: 'build.js',
-		path: __dirname + '/dist/'
+		filename: 't-blank.js',
+		path: __dirname + '/dist/',
+    library: "TBlank",
+    libraryTarget: "umd"
 	},
 	module: {
 		rules: [

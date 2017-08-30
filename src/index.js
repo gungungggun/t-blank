@@ -37,6 +37,23 @@ class TBlank {
         return 'other'
     }
   }
+
+  replace(val) {
+    if (this.device == 'other') {
+      let a = val.match(/<a(.|\s)*?>/gi)
+      self = this
+      a.forEach(v => {
+        let x = v.match(/href="([^\"]+)"/)
+        let url = x[1]
+        if (!self.isInternalLink(url)) {
+          val = val.replace(x[1], x[1]+'" target="_blank')
+        }
+      })
+    }
+    return val
+  }
 }
 
-new TBlank()
+var tblank = new TBlank
+module.exports = tblank
+module.exports.default = tblank
