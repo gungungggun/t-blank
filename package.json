@@ -1,15 +1,16 @@
 {
   "name": "t-blank",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": "Set target='_blank' attribute for all external links.",
   "keywords": [
     "blank",
     "link",
     "target"
   ],
-  "main": "dist/build.js",
+  "main": "dist/t-blank.js",
   "scripts": {
     "build": "node_modules\\.bin\\webpack",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gun Kimura",
