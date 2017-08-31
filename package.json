@@ -9,7 +9,7 @@
   ],
   "main": "dist/t-blank.js",
   "scripts": {
-    "build": "node_modules\\.bin\\webpack",
+    "build": "webpack",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
