@@ -1,17 +1,19 @@
 class TBlank {
   constructor() {
-    this.allA = document.getElementsByTagName("a")
-    this.aList = Array.prototype.slice.call(this.allA)
-    this.device = this.getDevice();
+    if (typeof document !== 'undefined') {
+      this.allA = document.getElementsByTagName("a")
+      this.aList = Array.prototype.slice.call(this.allA)
+      this.device = this.getDevice();
 
-    if (this.device == 'other') {
-      self = this
-      this.aList.forEach(function (item) {
-        let url = item.getAttribute("href")
-        if (!self.isInternalLink(url)) {
-          item.setAttribute("target", "_blank")
-        }
-      })
+      if (this.device == 'other') {
+        self = this
+        this.aList.forEach(function (item) {
+          let url = item.getAttribute("href")
+          if (!self.isInternalLink(url)) {
+            item.setAttribute("target", "_blank")
+          }
+        })
+      }
     }
   }
 

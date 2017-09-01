@@ -1,6 +1,6 @@
 {
   "name": "t-blank",
-  "version": "0.3.3",
+  "version": "0.3.6",
   "description": "Set target='_blank' attribute for all external links.",
   "keywords": [
     "blank",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "webpack": "^2.5.1"
   }
 }
