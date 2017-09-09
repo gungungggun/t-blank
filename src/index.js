@@ -47,9 +47,11 @@ class TBlank {
       if (a !== null) {
         a.forEach(v => {
           let x = v.match(/href="([^\"]+)"/)
-          let url = x[1]
-          if (!self.isInternalLink(url)) {
-            val = val.replace(x[1], x[1]+'" target="_blank')
+          if (x !== null) {
+            let url = x[1]
+            if (!self.isInternalLink(url)) {
+              val = val.replace(x[1], x[1]+'" target="_blank')
+            }
           }
         })
       }
