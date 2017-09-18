@@ -1,17 +1,19 @@
 class TBlank {
   constructor() {
-    this.allA = document.getElementsByTagName("a")
-    this.aList = Array.prototype.slice.call(this.allA)
-    this.device = this.getDevice();
+    if (typeof document !== 'undefined') {
+      this.allA = document.getElementsByTagName("a")
+      this.aList = Array.prototype.slice.call(this.allA)
+      this.device = this.getDevice();
 
-    if (this.device == 'other') {
-      self = this
-      this.aList.forEach(function (item) {
-        let url = item.getAttribute("href")
-        if (!self.isInternalLink(url)) {
-          item.setAttribute("target", "_blank")
-        }
-      })
+      if (this.device == 'other') {
+        self = this
+        this.aList.forEach(function (item) {
+          let url = item.getAttribute("href")
+          if (!self.isInternalLink(url)) {
+            item.setAttribute("target", "_blank")
+          }
+        })
+      }
     }
   }
 
@@ -42,13 +44,17 @@ class TBlank {
     if (this.device == 'other') {
       let a = val.match(/<a(.|\s)*?>/gi)
       self = this
-      a.forEach(v => {
-        let x = v.match(/href="([^\"]+)"/)
-        let url = x[1]
-        if (!self.isInternalLink(url)) {
-          val = val.replace(x[1], x[1]+'" target="_blank')
-        }
-      })
+      if (a !== null) {
+        a.forEach(v => {
+          let x = v.match(/href="([^\"]+)"/)
+          if (x !== null) {
+            let url = x[1]
+            if (!self.isInternalLink(url)) {
+              val = val.replace(x[1], x[1]+'" target="_blank')
+            }
+          }
+        })
+      }
     }
     return val
   }
