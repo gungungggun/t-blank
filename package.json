@@ -1,6 +1,6 @@
 {
   "name": "t-blank",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Set target='_blank' attribute for all external links.",
   "keywords": [
     "blank",
