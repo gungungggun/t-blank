@@ -1,6 +1,7 @@
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: __dirname + '/src/index.js',
   output: {
     filename: 't-blank.js',
@@ -8,17 +9,17 @@ module.exports = {
     library: "TBlank",
     libraryTarget: "umd"
   },
-  plugins: [
-    new UglifyJSPlugin()
-  ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
+        use: {
+          loader: 'babel-loader'
         }
       }
     ]
