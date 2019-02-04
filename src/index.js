@@ -12,6 +12,7 @@ class TBlank {
             let url = item.getAttribute('href')
             if (!self.isInternalLink(url)) {
               item.setAttribute('target', '_blank')
+              item.setAttribute('rel', 'noopener noreferrer')
             }
           })
         }
